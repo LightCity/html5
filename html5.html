@@ -23,6 +23,12 @@
         cnt.textBaseLine = "top";
         cnt.fillText(col, col-13, 10);
       }
+      <!-- 画第一个矩形 -->
+      var linearGradient = cnt.createLinearGradient(40, 40, 320, 320);
+      linearGradient.addColorStop(0, "red");
+      linearGradient.addColorStop(1, "green");
+      cnt.fillStyle = linearGradient;
+      cnt.fillRect(40, 40, 280, 280);
     }
     window.onload=loadfunction;
   </script>
@@ -34,7 +40,7 @@
   <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-<audio src="F:/Music/凤凰花开的路口.mp3" controls="controls">
+<audio src="http://zhangmenshiting.baidu.com/data2/music/7326445/1066652158400128.mp3?xcode=ad33fe7e0ae7915d459154d0bf60649c90cd0cce97e572a6" controls="controls">
 
 </audio>
 <div class="div1">
@@ -42,7 +48,7 @@ Your browser does not support the video tag.
 
   </canvas>
 
-
+  
 </div>
 </body>
 </html>
