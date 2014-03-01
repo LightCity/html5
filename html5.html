@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    //alert("test");
+    function loadfunction() {
+      var canvas1 = document.getElementById("canvas1");
+      var cnt = canvas1.getContext("2d");
+      cnt.strokeStyle="#f00";
+      for (var row=0; row<canvas1.height; row+=40) {
+        cnt.beginPath();
+        cnt.moveTo(0, row-0.5);
+        cnt.lineTo(canvas1.width, row-0.5);
+        cnt.stroke();
+        cnt.textBaseLine = "bottom";
+        cnt.fillText(row, 1, row);
+      }
+      for (var col=0; col<canvas1.width; col+=40) {
+        cnt.beginPath();
+        cnt.moveTo(col-0.5, 0);
+        cnt.lineTo(col-0.5, canvas1.height);
+        cnt.stroke();
+        cnt.textBaseLine = "top";
+        cnt.fillText(col, col-13, 10);
+      }
+    }
+    window.onload=loadfunction;
+  </script>
+</head>
+<body>
+
+<video width="320" height="240" controls="controls">
+  <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg">
+  <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<audio src="F:/Music/凤凰花开的路口.mp3" controls="controls">
+
+</audio>
+<div class="div1">
+  <canvas id="canvas1" width="560" height="360" style="border:1px solid">
+
+  </canvas>
+
+
+</div>
+</body></html>
